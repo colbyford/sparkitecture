@@ -1,6 +1,6 @@
 # Sparkitecture
 
-A Collection of Spark Scripts for Quick Deployment
+A Collection of "Cookbook-Style" Spark Scripts for Quick Deployment
 
 ## MLlib
 ### Prep Work
@@ -16,9 +16,10 @@ A Collection of Spark Scripts for Quick Deployment
 ### Regression
 - [Decision Tree](https://gist.github.com/colbyford/daa4508f6d8d94a405e7bd3a50c5ed77)
 - [Random Forest](https://gist.github.com/colbyford/f1f621cf45c6a62a9269348352f6609f)
-- [Linear Regression](https://gist.github.com/colbyford/1f47a90fe0c55b4414cbd0c784fe3a67)
+- [Linear Regression](https://gist.github.com/colbyford/184097b0ec37b2b35667dab2da57d349)
 
 ### Miscellaneous
 - [Model Saver](https://gist.github.com/colbyford/975ea1b05bef80b4c12292a139dcdbd7)
 - [Model Scorer](https://gist.github.com/colbyford/47ce6a72162c74c073b44532cd8be78c)
 - [Model Metrics - Binary Classification](https://gist.github.com/colbyford/dccaf10ef46512f8603a43ff6d6e3fbb)
+- [Feature Importance](https://gist.github.com/colbyford/5443a525fe76b602f813ff7904c4dfff)
