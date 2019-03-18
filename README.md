@@ -24,3 +24,6 @@ A Collection of "Cookbook-Style" Spark Scripts for Quick Deployment
 - [Model Scorer](https://gist.github.com/colbyford/47ce6a72162c74c073b44532cd8be78c)
 - [Model Metrics - Binary Classification](https://gist.github.com/colbyford/dccaf10ef46512f8603a43ff6d6e3fbb)
 - [Feature Importance](https://gist.github.com/colbyford/5443a525fe76b602f813ff7904c4dfff)
+
+### Serving
+- [API Setup with MMLSpark](https://gist.github.com/2b1229032d81940da0a994c1b5b32406.git) ([_Databricks Setup._](https://gist.github.com/a54f199c92b9d13e9f4a069e7c4a5b0e.git))
