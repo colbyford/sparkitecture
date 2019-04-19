@@ -23,7 +23,7 @@ A Collection of "Cookbook-Style" Spark Scripts for Quick Deployment
 - [Model Saver](https://gist.github.com/colbyford/975ea1b05bef80b4c12292a139dcdbd7)
 - [Model Scorer](https://gist.github.com/colbyford/47ce6a72162c74c073b44532cd8be78c)
 - [Batch Scoring w/ ADFv2](https://gist.github.com/colbyford/1a4a0babeaf77bd943e42d57950308a2)
-- [Model Metrics - Binary Classification](https://gist.github.com/colbyford/dccaf10ef46512f8603a43ff6d6e3fbb)
+- [Model Metrics](https://gist.github.com/colbyford/fc8df4b8af053d5706472e354e6378f6)
 - [Feature Importance](https://gist.github.com/colbyford/5443a525fe76b602f813ff7904c4dfff)
 
 ### Serving
