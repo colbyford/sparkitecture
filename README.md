@@ -28,3 +28,6 @@ A Collection of "Cookbook-Style" Spark Scripts for Quick Deployment
 
 ### Serving
 - [API Setup with MMLSpark](https://gist.github.com/2b1229032d81940da0a994c1b5b32406.git) ([_Databricks Setup._](https://gist.github.com/a54f199c92b9d13e9f4a069e7c4a5b0e.git))
+
+### AutoML
+- [Converting Spark DataFrames to Numpy Arrays](https://gist.github.com/colbyford/d711c9f037e308d1903314d0fcc81a64)
