@@ -7,6 +7,7 @@ A Collection of "Cookbook-Style" Spark Scripts for Quick Deployment
 - [Mount Blob Storage](https://gist.github.com/colbyford/8b6d3f0ced00adb76ab8fc8024ae77c5)
 - [Data Prep for Binary Classification](https://gist.github.com/colbyford/83978917799dbcab6293521a60f29e94)
 - [Create Cluster with Databricks HLS Runtime](https://gist.github.com/colbyford/3a37600681168f1e6bc49315de67f4d9)
+- [Connect to Azure SQL DW](https://gist.github.com/colbyford/fe989325ddb2d1d6810dcc5fe5422ed0)
 
 ### Classification
 - [Naïve Bayes](https://gist.github.com/colbyford/1f47a90fe0c55b4414cbd0c784fe3a67)
