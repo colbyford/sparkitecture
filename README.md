@@ -2,7 +2,9 @@
 
 A Collection of "Cookbook-Style" Spark Scripts for Quick Deployment
 
-## MLlib
+<h3 align = "right">Colby T. Ford, Ph.D.</h3>
+
+## Machine Learning
 ### Prep Work
 - [Mount Blob Storage](https://gist.github.com/colbyford/8b6d3f0ced00adb76ab8fc8024ae77c5)
 - [Data Prep for Binary Classification](https://gist.github.com/colbyford/83978917799dbcab6293521a60f29e94)
