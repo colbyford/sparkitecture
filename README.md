@@ -1,2 +1,2 @@
-# Welcome to Sparkitecture
+# Welcome to Sparkitecture!
 

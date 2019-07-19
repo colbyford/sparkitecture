@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to Sparkitecture](README.md)
+* [Welcome to Sparkitecture!](README.md)
 
 ## Machine Learning
 
