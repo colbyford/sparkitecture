@@ -27,3 +27,8 @@
 
 * [API Serving](operationalization/api-serving.md)
 
+## Cloud Service Integration
+
+* [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
+* [Azure Storage](cloud-service-integration/azure-storage.md)
+
