@@ -4,5 +4,5 @@ By: Colby T. Ford, Ph.D.
 
 A collection of “cookbook-style” scripts for Apache Spark.
 
-__In progress...__
+__A work in progress...__
 
