@@ -6,4 +6,4 @@ A collection of “cookbook-style” scripts for Apache Spark.
 
 __A work in progress...__
 
-<footer>Hosted on GitBooks.io</footer>
+<footer>Created using GitBooks.io</footer>
