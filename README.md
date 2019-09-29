@@ -1,6 +1,6 @@
 # Welcome to Sparkitecture!
 
-By: Colby T. Ford, Ph.D.
+<p align=“right”>By: Colby T. Ford, Ph.D.</p>
 
 A collection of “cookbook-style” scripts for Apache Spark.
 
