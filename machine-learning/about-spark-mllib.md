@@ -1,6 +1,10 @@
+---
+description: MLlib is Apache Spark's scalable machine learning library.
+---
+
 # About Spark MLlib
 
-MLlib is Apache Spark's scalable machine learning library.
+MLlib works with Spark's APIs and with NumPy in Python and with R libraries. Since Spark excels at iterative computation, MLlib runs very fast with highly-scalable, high-quality algorithms that leverage iteration.
 
 ### Included Functionality:
 
