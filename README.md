@@ -1,5 +1,6 @@
 ![](.gitbook/assets/sparkitecture.png)
 
+[![DOI](https://zenodo.org/badge/167874964.svg)](https://zenodo.org/badge/latestdoi/167874964)
 <h3 align="right">By: Colby T. Ford, Ph.D.</h3>
 
 <p align="center">A collection of “cookbook-style” scripts for Apache Spark.</p>
