@@ -1,9 +1,10 @@
 # Welcome to Sparkitecture!
 
-<p align="right">By: Colby T. Ford, Ph.D.</p>
+By: Colby T. Ford, Ph.D.
 
 A collection of “cookbook-style” scripts for Apache Spark.
 
-__A work in progress...__
+**A work in progress...**
 
-<p align="right"><i>PySpark Edition</i> | Created using GitBooks.io</p>
+PySpark Edition \| Created using GitBooks.io
+
