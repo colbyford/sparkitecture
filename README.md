@@ -1,6 +1,4 @@
-# Welcome to Sparkitecture!
-
-![Welcome to Sparkitecture!](.gitbook/assets/sparkitecture.png)
+![](.gitbook/assets/sparkitecture.png)
 
 By: Colby T. Ford, Ph.D.
 
