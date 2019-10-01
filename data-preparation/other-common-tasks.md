@@ -1,6 +1,6 @@
 # Other Common Tasks
 
-### Rename all columns
+## Rename all columns
 
 ```python
 column_list = data.columns
@@ -15,7 +15,7 @@ column_mapping = [[o, n] for o, n in zip(column_list, new_column_list)]
 # data = data.select(list(map(lambda old, new: col(old).alias(new),*zip(*column_mapping))))
 ```
 
-### Convert PySpark DataFrame to NumPy array
+## Convert PySpark DataFrame to NumPy array
 
 ```text
 ## Convert `train` DataFrame to NumPy
@@ -31,5 +31,78 @@ X_test = np.apply_along_axis(lambda x : x[0], 1, testseries)
 y_test = pdtest['label'].values.reshape(-1,1).ravel()
 
 print(y_test)
+```
+
+## Call Cognitive Service API using PySpark
+
+### Create \`chunker\` function
+
+The cognitive service APIs can only take a limited number of observations at a time \(1,000, to be exact\) or a limited amount of data in a single call. So, we can create a `chunker` function that we will use to split the dataset up into smaller chunks.
+
+```python
+## Define Chunking Logic
+import pandas as pd
+import numpy as np
+# Based on: https://stackoverflow.com/questions/25699439/how-to-iterate-over-consecutive-chunks-of-pandas-dataframe-efficiently
+def chunker(seq, size):
+    return (seq[pos:pos + size] for pos in range(0, len(seq), size))
+```
+
+### Convert Spark DataFrame to Pandas
+
+```python
+## sentiment_df_pd = sentiment_df.toPandas()
+```
+
+### Set up API requirements
+
+```python
+# pprint is used to format the JSON response
+from pprint import pprint
+import json
+import requests
+
+subscription_key = '<SUBSCRIPTIONKEY>'
+endpoint = 'https://<SERVICENAME>.cognitiveservices.azure.com'
+sentiment_url = endpoint + "/text/analytics/v2.1/sentiment"
+headers = {"Ocp-Apim-Subscription-Key": subscription_key}
+```
+
+### Create DataFrame for incoming scored data
+
+```python
+from pyspark.sql.types import *
+
+sentiment_schema = StructType([StructField("id", IntegerType(), True),
+                               StructField("score", FloatType(), True)])
+
+sentiments_df = spark.createDataFrame([], sentiment_schema)
+
+display(sentiments_df)
+```
+
+### Loop through chunks of the data and call the API
+
+```python
+for chunk in chunker(sentiment_df_pd, 1000):
+  print("Scoring", len(chunk), "rows.")
+  sentiment_df_json = json.loads('{"documents":' + chunk.to_json(orient='records') + '}')
+  
+  response = requests.post(sentiment_url, headers = headers, json = sentiment_df_json)
+  sentiments = response.json()
+  # pprint(sentiments)
+  
+  sentiments_pd = pd.read_json(json.dumps(sentiments['documents']))
+  sentiments_df_chunk = spark.createDataFrame(sentiments_pd)
+  sentiments_df = sentiments_df.unionAll(sentiments_df_chunk)
+  
+display(sentiments_df)
+sentiments_df.count()
+```
+
+### Write the results out to mounted storage
+
+```python
+sentiments_df.coalesce(1).write.csv("/mnt/textanalytics/sentimentanalysis/")
 ```
 
