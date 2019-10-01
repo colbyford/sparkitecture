@@ -15,7 +15,7 @@ from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.mllib.evaluation import BinaryClassificationMetrics
 ```
 
-### Initialize Random Forest object
+### Initialize Logistic Regression object
 
 ```python
 lr = LogisticRegression(labelCol="label", featuresCol="features")

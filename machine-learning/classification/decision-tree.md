@@ -15,7 +15,7 @@ from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.mllib.evaluation import BinaryClassificationMetrics
 ```
 
-### Initialize Random Forest object
+### Initialize Decision Tree object
 
 ```python
 dt = DecisionTreeClassifier(labelCol="label", featuresCol="features")
