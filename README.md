@@ -4,9 +4,11 @@
 
 [![DOI](https://zenodo.org/badge/167874964.svg)](https://zenodo.org/badge/latestdoi/167874964)
 
-## By: Colby T. Ford, Ph.D.
+> A collection of “cookbook-style” scripts for simplifying data engineering and machine learning in Apache Spark.
 
-A collection of “cookbook-style” scripts for Apache Spark.
+**Created by:** Colby T. Ford, Ph.D.
 
-PySpark Edition \| A work in progress... \| Created using [GitBook.com](https://www.gitbook.com/)
+{% hint style="info" %}
+PySpark Edition \| _A work in progress..._ \| Created using [GitBook.com](https://www.gitbook.com/)
+{% endhint %}
 

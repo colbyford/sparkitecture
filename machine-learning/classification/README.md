@@ -18,8 +18,8 @@ Classification algorithms are used to identify into which classes observations o
 ### Classification Algorithms included in MLlib:
 
 * [Logistic regression](logistic-regression.md) \(both binomial and multiclass\)
-* [Decision trees](../regression/decision-tree.md)
-* [Random forests](../regression/random-forest.md)
+* [Decision trees](decision-tree.md)
+* [Random forests](random-forest.md)
 * Gradient-boosted trees
 * Multilayer perceptron
 * Linear Support Vector Machine
