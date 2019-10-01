@@ -9,7 +9,7 @@
 
 ## Data Preparation
 
-* [Untitled](data-preparation/untitled.md)
+* [Shaping Data with Pipelines](data-preparation/untitled.md)
 
 ## Machine Learning
 
@@ -26,7 +26,7 @@
 
 ## Streaming Data
 
-* [Untitled](streaming-data/untitled.md)
+* [Coming Soon...](streaming-data/untitled.md)
 
 ## Operationalization
 
