@@ -57,6 +57,7 @@ print(lrcvModel)
 ```
 
 ### Get model information
+
 ```python
 lrcvSummary = lrcvModel.bestModel.summary
 print("Coefficient Standard Errors: " + str(lrcvSummary.coefficientStandardErrors))
@@ -78,6 +79,4 @@ print('RMSE:', lrevaluator.evaluate(lrpredictions))
 {% hint style="info" %}
 **Note:** When you use the `CrossValidator` function to set up cross-validation of your models, the resulting model object will have all the runs included, but will only use the best model when you interact with the model object using other functions like `evaluate` or `transform`.
 {% endhint %}
-
-
 

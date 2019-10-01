@@ -71,5 +71,3 @@ print('AUC:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rd
 **Note:** When you use the `CrossValidator` function to set up cross-validation of your models, the resulting model object will have all the runs included, but will only use the best model when you interact with the model object using other functions like `evaluate` or `transform`.
 {% endhint %}
 
-
-

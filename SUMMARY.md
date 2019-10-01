@@ -4,9 +4,9 @@
 
 ## Cloud Service Integration
 
-* [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
 * [Azure Storage](cloud-service-integration/azure-storage.md)
 * [Azure SQL Data Warehouse](cloud-service-integration/azure-sql-data-warehouse.md)
+* [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
 
 ## Data Preparation
 
@@ -19,8 +19,8 @@
 * [Classification](machine-learning/classification/README.md)
   * [Logistic Regression](machine-learning/classification/logistic-regression.md)
   * [Naïve Bayes](machine-learning/classification/naive-bayes.md)
-  * [Decision Tree](machine-learning/classification/decision-tree.md)
-  * [Random Forest](machine-learning/classification/random-forest.md)
+  * [Decision Tree](machine-learning/regression/decision-tree.md)
+  * [Random Forest](machine-learning/regression/random-forest.md)
 * [Regression](machine-learning/regression/README.md)
   * [Linear Regression](machine-learning/regression/linear-regression.md)
   * [Decision Tree](machine-learning/regression/decision-tree.md)
