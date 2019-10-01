@@ -11,6 +11,7 @@
 ## Data Preparation
 
 * [Shaping Data with Pipelines](data-preparation/untitled.md)
+* [Other Common Tasks](data-preparation/other-common-tasks.md)
 
 ## Machine Learning
 
