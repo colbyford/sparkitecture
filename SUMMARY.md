@@ -35,4 +35,5 @@
 ## Operationalization
 
 * [API Serving](operationalization/api-serving.md)
+* [Batch Scoring](operationalization/batch-scoring.md)
 
