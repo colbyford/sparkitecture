@@ -1,6 +1,6 @@
 # Welcome to Sparkitecture!
 
-![](.gitbook/assets/sparkitecture.png)
+![](/img/sparkitecture_logo.png)
 
 [![DOI](https://zenodo.org/badge/167874964.svg)](https://zenodo.org/badge/latestdoi/167874964)
 
