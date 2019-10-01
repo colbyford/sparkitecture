@@ -2,6 +2,15 @@
 
 * [Welcome to Sparkitecture!](README.md)
 
+## Cloud Service Integration
+
+* [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
+* [Azure Storage](cloud-service-integration/azure-storage.md)
+
+## Data Preparation
+
+* [Untitled](data-preparation/untitled.md)
+
 ## Machine Learning
 
 * [About Spark MLlib](machine-learning/about-spark-mllib.md)
@@ -15,10 +24,6 @@
   * [Decision Tree](machine-learning/regression/decision-tree.md)
   * [Random Forest](machine-learning/regression/random-forest.md)
 
-## Data Preparation
-
-* [Untitled](data-preparation/untitled.md)
-
 ## Streaming Data
 
 * [Untitled](streaming-data/untitled.md)
@@ -26,9 +31,4 @@
 ## Operationalization
 
 * [API Serving](operationalization/api-serving.md)
-
-## Cloud Service Integration
-
-* [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
-* [Azure Storage](cloud-service-integration/azure-storage.md)
 
