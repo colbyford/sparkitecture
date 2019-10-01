@@ -28,6 +28,7 @@
 * [MLflow](machine-learning/mlflow.md)
 * [Feature Importance](machine-learning/feature-importance.md)
 * [Model Saving and Loading](machine-learning/model-saving-and-loading.md)
+* [Model Evaluation](machine-learning/model-evaluation.md)
 
 ## Streaming Data
 
