@@ -24,6 +24,7 @@
   * [Decision Tree](machine-learning/regression/decision-tree.md)
   * [Random Forest](machine-learning/regression/random-forest.md)
 * [Model Saving and Loading](machine-learning/model-saving-and-loading.md)
+* [Feature Importance](machine-learning/feature-importance.md)
 
 ## Streaming Data
 
