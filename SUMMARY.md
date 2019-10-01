@@ -6,6 +6,7 @@
 
 * [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
 * [Azure Storage](cloud-service-integration/azure-storage.md)
+* [Azure SQL Data Warehouse](cloud-service-integration/azure-sql-data-warehouse.md)
 
 ## Data Preparation
 
@@ -23,8 +24,9 @@
   * [Linear Regression](machine-learning/regression/linear-regression.md)
   * [Decision Tree](machine-learning/regression/decision-tree.md)
   * [Random Forest](machine-learning/regression/random-forest.md)
-* [Model Saving and Loading](machine-learning/model-saving-and-loading.md)
+* [MLflow](machine-learning/mlflow.md)
 * [Feature Importance](machine-learning/feature-importance.md)
+* [Model Saving and Loading](machine-learning/model-saving-and-loading.md)
 
 ## Streaming Data
 

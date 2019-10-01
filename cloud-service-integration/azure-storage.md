@@ -8,7 +8,7 @@ description: >-
 # Azure Storage
 
 {% hint style="danger" %}
-Databricks-Specific Content
+Databricks-Specific Functionality
 {% endhint %}
 
 ## Mounting Blob Storage
