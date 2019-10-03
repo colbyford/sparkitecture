@@ -13,12 +13,42 @@
 _Sparkitecture_ is a collection of “cookbook-style” scripts for simplifying data engineering and machine learning in Apache Spark.
 
 {% hint style="info" %}
-This is an open project for everyone in the Spark community. If you have ideas or contributions you'd like to add, submit a [Feature Request](https://github.com/colbyford/sparkitecture/issues/new/choose) or a write your tutorial code and create a [Pull Request](https://github.com/colbyford/sparkitecture/pulls) in the GitHub repo.
+This is an open source project \(GPL v3.0\) for the Spark community. If you have ideas or contributions you'd like to add, submit a [Feature Request](https://github.com/colbyford/sparkitecture/issues/new/choose) or a write your code/tutorial/page and create a [Pull Request](https://github.com/colbyford/sparkitecture/pulls) in the GitHub repo.
 {% endhint %}
 
 ## How to Cite
 
-| BibTex | Text Citation |
-| :--- | :--- |
-| `@misc{sparkitecture, author = {Colby Ford}, title  = {Sparkitecture - {A} collection of "cookbook-style" scripts for simplifying data engineering and machine learning in {Apache Spark}.}, month = oct,   year = 2019, doi = {10.5281/zenodo.3468502}, url = {https://doi.org/10.5281/zenodo.3468502}}` | Colby Ford. \(2019, October\) Sparkitecture - A collection of "cookbook-style" scripts for simplifying data engineering and machine learning in Apache Spark., \(Version v1.0.0\). Zenodo. [http://doi.org/10.5281/zenodo.3468502](http://doi.org/10.5281/zenodo.3468502) |
-
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">BibTex</th>
+      <th style="text-align:left">Text Citation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><code>@misc{sparkitecture,</code>
+        </p>
+        <p><code>author = {Colby Ford},</code>
+        </p>
+        <p><code>title  = {Sparkitecture - {A} collection of &quot;cookbook-style&quot; scripts for simplifying data engineering and machine learning in {Apache Spark}.},</code>
+        </p>
+        <p><code>month = oct,</code>
+        </p>
+        <p><code>year = 2019,</code>
+        </p>
+        <p><code>doi = {10.5281/zenodo.3468502},</code>
+        </p>
+        <p><code>url = {https://doi.org/10.5281/zenodo.3468502}</code>
+        </p>
+        <p><code>}</code>
+        </p>
+      </td>
+      <td style="text-align:left">Colby Ford. (2019, October) Sparkitecture - A collection of &quot;cookbook-style&quot;
+        scripts for simplifying data engineering and machine learning in Apache
+        Spark., (Version v1.0.0). Zenodo. <a href="http://doi.org/10.5281/zenodo.3468502">http://doi.org/10.5281/zenodo.3468502</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
