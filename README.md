@@ -18,20 +18,9 @@ PySpark Edition \| _A work in progress..._ \| Created using [GitBook.com](https:
 
 ### How to Cite
 
-| BibTex | Normal Text |
-| :--- | :--- |
-| BibTex goes here | Colby Ford. \(2019, October\) Sparkitecture - A collection of "cookbook-style" scripts for simplifying data engineering and machine learning in Apache Spark., \(Version v1.0.0\). Zenodo. [http://doi.org/10.5281/zenodo.3468502](http://doi.org/10.5281/zenodo.3468502) |
+| BibTex                                                                                                                                                                                                                                                                                                                                  | Text Citation                                                                                                                                                                                                                                                             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```text @misc{sparkitecture,   author = {Colby Ford},   title  = {Sparkitecture - {A} collection of "cookbook-style" scripts for simplifying data engineering and machine learning in {Apache Spark}.},   month  = oct,   year   = 2019,   doi    = {10.5281/zenodo.3468502},   url    = {https://doi.org/10.5281/zenodo.3468502} } ``` | Colby Ford. \(2019, October\) Sparkitecture - A collection of "cookbook-style" scripts for simplifying data engineering and machine learning in Apache Spark., \(Version v1.0.0\). Zenodo. [http://doi.org/10.5281/zenodo.3468502](http://doi.org/10.5281/zenodo.3468502) |
 
-#### BibTex
 
-```text
-@misc{sparkitecture,
-  author = {Colby Ford},
-  title  = {Sparkitecture - {A} collection of "cookbook-style" scripts for simplifying data engineering and machine learning in {Apache Spark}.},
-  month  = oct,
-  year   = 2019,
-  doi    = {10.5281/zenodo.3468502},
-  url    = {https://doi.org/10.5281/zenodo.3468502}
-}
-```
 
