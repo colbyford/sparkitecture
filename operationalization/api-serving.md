@@ -102,3 +102,7 @@ You may need to run `sudo netstat -tulpn` if you're running inside Databricks.
 Use this command to look for the port that was opened by the server.
 {% endhint %}
 
+### Resources:
+
+MMLSpark on GitHub: [https://github.com/Azure/mmlspark](https://github.com/Azure/mmlspark)
+
