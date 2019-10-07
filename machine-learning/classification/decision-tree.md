@@ -9,15 +9,15 @@
 ### Load in required libraries
 
 ```python
-from pyspark.ml.regression import DecisionTreeRegressor
+from pyspark.ml.classification import DecisionTreeClassifier
 from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
-from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
 ```
 
 ### Initialize Decision Tree object
 
 ```python
-dt = DecisionTreeRegressor(labelCol="label", featuresCol="features")
+dt = DecisionTreeClassifier(labelCol="label", featuresCol="features")
 ```
 
 ### Create a parameter grid for tuning the model

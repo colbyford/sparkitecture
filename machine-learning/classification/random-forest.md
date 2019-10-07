@@ -9,15 +9,15 @@
 ### Load in required libraries
 
 ```python
-from pyspark.ml.regression import RandomForestRegressor
+from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
-from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
 ```
 
 ### Initialize Random Forest object
 
 ```python
-rf = RandomForestRegressor(labelCol="label", featuresCol="features")
+rf = RandomForestClassifier(labelCol="label", featuresCol="features")
 ```
 
 ### Create a parameter grid for tuning the model
