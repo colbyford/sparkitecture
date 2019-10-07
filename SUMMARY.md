@@ -22,6 +22,7 @@
   * [Naïve Bayes](machine-learning/classification/naive-bayes.md)
   * [Decision Tree](machine-learning/classification/decision-tree.md)
   * [Random Forest](machine-learning/classification/random-forest.md)
+  * [Gradient-Boosted Trees](machine-learning/classification/gradient-boosted-trees.md)
 * [Regression](machine-learning/regression/README.md)
   * [Linear Regression](machine-learning/regression/linear-regression.md)
   * [Decision Tree](machine-learning/regression/decision-tree.md)
