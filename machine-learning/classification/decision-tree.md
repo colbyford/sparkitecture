@@ -1,6 +1,6 @@
 # Decision Tree
 
-## Setting Up Decision Tree Regression
+## Setting Up a Decision Tree Classifier
 
 {% hint style="info" %}
 **Note:** Make sure you have your training and test data already vectorized and ready to go before you begin trying to fit the machine learning model to unprepped data.

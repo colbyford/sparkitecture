@@ -1,6 +1,6 @@
 # Random Forest
 
-## Setting Up Random Forest Regression
+## Setting Up a Random Forest Classifier
 
 {% hint style="info" %}
 **Note:** Make sure you have your training and test data already vectorized and ready to go before you begin trying to fit the machine learning model to unprepped data.
