@@ -1,5 +1,11 @@
 # Other Common Tasks
 
+### Split Data into Training and Test Datasets
+
+```text
+train, test = dataset.randomSplit([0.75, 0.25], seed = 1337)
+```
+
 ## Rename all columns
 
 ```python

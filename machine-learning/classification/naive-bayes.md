@@ -13,12 +13,6 @@ from pyspark.ml.classification import NaiveBayes
 from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.mllib.evaluation import BinaryClassificationMetrics
-
-
-# cvModel uses the best model found from the Cross Validation
-# Evaluate best model
-print('Accuracy:', nbevaluator.evaluate(nbpredictions))
-print('AUC:', BinaryClassificationMetrics(nbpredictions['label','prediction'].rdd).areaUnderROC)
 ```
 
 ### Initialize Naïve Bayes object
