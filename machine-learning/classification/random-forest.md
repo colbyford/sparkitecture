@@ -36,7 +36,7 @@ rfparamGrid = (ParamGridBuilder()
 ### Define how you want the model to be evaluated
 
 ```python
-rfevaluator = RegressionEvaluator(predictionCol="prediction", labelCol="label", metricName="rmse")
+rfevaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction")
 ```
 
 ### Define the type of cross-validation you want to perform
@@ -65,7 +65,8 @@ rfpredictions = rfcvModel.transform(test)
 ### Evaluate the model
 
 ```python
-print('RMSE:', rfevaluator.evaluate(rfpredictions))
+print('Accuracy:', rfevaluator.evaluate(rfpredictions))
+print('AUC:', BinaryClassificationMetrics(rfpredictions['label','prediction'].rdd).areaUnderROC)
 ```
 
 {% hint style="info" %}

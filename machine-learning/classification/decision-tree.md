@@ -34,7 +34,7 @@ dtparamGrid = (ParamGridBuilder()
 ### Define how you want the model to be evaluated
 
 ```python
-dtevaluator = RegressionEvaluator(predictionCol="prediction", labelCol="label", metricName="rmse")
+dtevaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction")
 ```
 
 ### Define the type of cross-validation you want to perform
@@ -63,7 +63,8 @@ dtpredictions = dtcvModel.transform(test)
 ### Evaluate the model
 
 ```python
-print('RMSE:', dtevaluator.evaluate(dtpredictions))
+print('Accuracy:', dtevaluator.evaluate(dtpredictions))
+print('AUC:', BinaryClassificationMetrics(dtpredictions['label','prediction'].rdd).areaUnderROC)
 ```
 
 {% hint style="info" %}
