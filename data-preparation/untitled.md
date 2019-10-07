@@ -4,7 +4,7 @@
 
 ```python
 from pyspark.ml import Pipeline
-from pyspark.ml.feature import OneHotEncoder, OneHotEncoderEstimator, StringIndexer, VectorAssemblerowers
+from pyspark.ml.feature import OneHotEncoder, OneHotEncoderEstimator, StringIndexer, VectorAssembler
 ```
 
 ### Define which columns are numerical versus categorical \(and which is the label column\)
