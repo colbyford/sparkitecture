@@ -27,6 +27,7 @@
   * [Linear Regression](machine-learning/regression/linear-regression.md)
   * [Decision Tree](machine-learning/regression/decision-tree.md)
   * [Random Forest](machine-learning/regression/random-forest.md)
+  * [Gradient-Boosted Trees](machine-learning/regression/gradient-boosted-trees.md)
 * [MLflow](machine-learning/mlflow.md)
 * [Feature Importance](machine-learning/feature-importance.md)
 * [Model Saving and Loading](machine-learning/model-saving-and-loading.md)
