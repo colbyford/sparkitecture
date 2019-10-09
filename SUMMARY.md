@@ -42,3 +42,8 @@
 * [API Serving](operationalization/api-serving.md)
 * [Batch Scoring](operationalization/batch-scoring.md)
 
+## Natural Language Processing
+
+* [Data Preparation](natural-language-processing/data-preparation.md)
+* [Model Evaluation](natural-language-processing/model-evaluation.md)
+
