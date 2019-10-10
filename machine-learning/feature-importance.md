@@ -44,9 +44,12 @@ attrs = sorted(
 ### Extract coefficients from a model
 
 ```python
+import pandas as pd
+
 featurelist = pd.DataFrame(dataset.schema["features"].metadata["ml_attr"]["attrs"]["binary"]+dataset.schema["features"].metadata["ml_attr"]["attrs"]["numeric"]).sort_values("idx")
 featurelist["Coefficient"] = pd.DataFrame(model.bestModel.coefficients.toArray())
 featurelist = sqlContext.createDataFrame(featurelist)
+
 display(featurelist)
 ```
 
