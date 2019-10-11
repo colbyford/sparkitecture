@@ -35,7 +35,7 @@
 
 ## Streaming Data
 
-* [Coming Soon...](streaming-data/untitled.md)
+* [Structured Streaming](streaming-data/structured-streaming.md)
 
 ## Operationalization
 
