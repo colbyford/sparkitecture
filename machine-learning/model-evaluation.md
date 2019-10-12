@@ -16,7 +16,7 @@ print('F1 Score:', lrmetrics.fMeasure(1.0,1.0))
 ### Evaluate binary classification models
 
 ```python
-for model in ["lrpredictions", "dtpredictions", "rfpredictions", "nbpredictions]:
+for model in ["lrpredictions", "dtpredictions", "rfpredictions", "nbpredictions", "gbpredictions"]:
     df = globals()[model]
     
     tp = df[(df.label == 1) & (df.prediction == 1)].count()
