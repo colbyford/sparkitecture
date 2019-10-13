@@ -104,5 +104,5 @@ Use this command to look for the port that was opened by the server.
 
 ### Resources:
 
-MMLSpark on GitHub: [https://github.com/Azure/mmlspark](https://github.com/Azure/mmlspark)
+Microsoft MMLSpark on GitHub: [https://github.com/Azure/mmlspark](https://github.com/Azure/mmlspark)
 
