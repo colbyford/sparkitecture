@@ -1,5 +1,9 @@
 # Batch Scoring
 
+{% hint style="info" %}
+This section is designed for use with a data orchestration tool that can call and execute Databricks notebooks. For more information on how to set up Azure Data Factory, see: [https://docs.microsoft.com/en-us/azure/data-factory/transform-data-using-databricks-notebook](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-using-databricks-notebook).
+{% endhint %}
+
 ### Create date parameter
 
 ```python

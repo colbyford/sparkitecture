@@ -69,7 +69,6 @@ serving_outputs = mymodel.bestModel.transform(mydataset) \
   .makeReply("prediction")
 
 # display(serving_inputs)
-
 ```
 
 ### Set up server
