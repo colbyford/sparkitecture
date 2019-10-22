@@ -1,7 +1,14 @@
+---
+description: >-
+  MLflow is an open source library by the Databricks team designed for managing
+  the machine learning lifecycle. It allows for the creation of projects,
+  tracking of metrics, and model versioning.
+---
+
 # MLflow
 
-{% hint style="danger" %}
-Databricks-Specific Functionality
+{% hint style="warning" %}
+MLflow can be used in any Spark environmnet, but the automated tracking and UI of MLflow is Databricks-Specific Functionality.
 {% endhint %}
 
 Track metrics and parameters
@@ -21,3 +28,4 @@ with mlflow.start_run():
 ```
 
 MLflow GitHub: [https://github.com/mlflow/mlflow/](https://github.com/mlflow/mlflow/)
+
