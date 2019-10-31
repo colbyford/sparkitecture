@@ -61,8 +61,9 @@ nbpredictions = nbcvModel.transform(test)
 ### Evaluate the model
 
 ```python
-print('Accuracy:', nbevaluator.evaluate(nbpredictions))
-print('AUC:', BinaryClassificationMetrics(nbpredictions['label','prediction'].rdd).areaUnderROC)
+print('Accuracy:', lrevaluator.evaluate(lrpredictions))
+print('AUC:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderROC)
+print('PR:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderPR)
 ```
 
 {% hint style="info" %}

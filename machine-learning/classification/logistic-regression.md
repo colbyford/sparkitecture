@@ -34,7 +34,7 @@ lrparamGrid = (ParamGridBuilder()
 ### Define how you want the model to be evaluated
 
 ```python
-lrevaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction")
+lrevaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction", metricName = "areaUnderAUC")
 ```
 
 ### Define the type of cross-validation you want to perform
@@ -65,6 +65,7 @@ lrpredictions = lrcvModel.transform(test)
 ```python
 print('Accuracy:', lrevaluator.evaluate(lrpredictions))
 print('AUC:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderROC)
+print('PR:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderPR)
 ```
 
 {% hint style="info" %}

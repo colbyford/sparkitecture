@@ -63,8 +63,9 @@ dtpredictions = dtcvModel.transform(test)
 ### Evaluate the model
 
 ```python
-print('Accuracy:', dtevaluator.evaluate(dtpredictions))
-print('AUC:', BinaryClassificationMetrics(dtpredictions['label','prediction'].rdd).areaUnderROC)
+print('Accuracy:', lrevaluator.evaluate(lrpredictions))
+print('AUC:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderROC)
+print('PR:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderPR)
 ```
 
 {% hint style="info" %}
