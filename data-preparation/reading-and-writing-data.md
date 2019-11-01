@@ -10,3 +10,19 @@ dataset = sqlContext.read.format('csv') \
                     .load('/mnt/<FOLDERNAME>/<FILENAME>.csv')
 ```
 
+### ...when Schema Inference Fails
+
+```python
+from pyspark.sql.types import *
+
+schema = StructType([StructField('ID', IntegerType(), True),
+                     StructField('Value', DoubleType(), True),
+                     StructField('Category', StringType(), True),
+                     StructField('Date', DateType(), True)])
+
+dataset = sqlContext.read.format('csv') \
+                    .schema(schema) \
+                    .options(header='true', delimiter= ',') \
+                    .load('/mnt/<FOLDERNAME>/<FILENAME>.csv')
+```
+
