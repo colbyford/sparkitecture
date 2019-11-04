@@ -29,9 +29,9 @@ dataset = sqlContext.read.format('csv') \
 ## Writing out Data
 
 ```python
-df.coalesce(1)
-   .write.format("com.databricks.spark.csv")
-   .option("header", "true")
+df.coalesce(1) \
+   .write.format("com.databricks.spark.csv") \
+   .option("header", "true") \
    .save("file.csv")
 ```
 
