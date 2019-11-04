@@ -26,3 +26,12 @@ dataset = sqlContext.read.format('csv') \
                     .load('/mnt/<FOLDERNAME>/<FILENAME>.csv')
 ```
 
+## Writing out Data
+
+```python
+df.coalesce(1)
+   .write.format("com.databricks.spark.csv")
+   .option("header", "true")
+   .save("file.csv")
+```
+
