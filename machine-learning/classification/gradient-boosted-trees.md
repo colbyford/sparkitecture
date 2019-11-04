@@ -25,6 +25,7 @@ gb = GBTClassifier(labelCol="label", featuresCol="features")
 ```python
 gbparamGrid = (ParamGridBuilder()
              .addGrid(gb.maxDepth, [2, 5, 10])
+             .addGrid(gb.maxBins, [10, 20, 40])
              .addGrid(gb.maxIter, [5, 10, 20])
              .build())
 ```

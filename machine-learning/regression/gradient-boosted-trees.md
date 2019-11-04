@@ -23,47 +23,46 @@ gb = GBTRegressor(labelCol="label", featuresCol="features")
 ### Create a parameter grid for tuning the model
 
 ```python
-dtparamGrid = (ParamGridBuilder()
-             .addGrid(dt.maxDepth, [2, 5, 10, 20, 30])
-             #.addGrid(dt.maxDepth, [2, 5, 10])
-             .addGrid(dt.maxBins, [10, 20, 40, 80, 100])
-             #.addGrid(dt.maxBins, [10, 20])
+gbparamGrid = (ParamGridBuilder()
+             .addGrid(gb.maxDepth, [2, 5, 10])
+             .addGrid(gb.maxBins, [10, 20, 40])
+             .addGrid(gb.maxIter, [5, 10, 20])
              .build())
 ```
 
 ### Define how you want the model to be evaluated
 
 ```python
-dtevaluator = RegressionEvaluator(predictionCol="prediction", labelCol="label", metricName="rmse")
+gbevaluator = RegressionEvaluator(predictionCol="prediction", labelCol="label", metricName="rmse")
 ```
 
 ### Define the type of cross-validation you want to perform
 
 ```python
 # Create 5-fold CrossValidator
-dtcv = CrossValidator(estimator = dt,
-                      estimatorParamMaps = dtparamGrid,
-                      evaluator = dtevaluator,
+gbcv = CrossValidator(estimator = gb,
+                      estimatorParamMaps = gbparamGrid,
+                      evaluator = gbevaluator,
                       numFolds = 5)
 ```
 
 ### Fit the model to the data
 
 ```python
-dtcvModel = dtcv.fit(train)
-print(dtcvModel)
+gbcvModel = gbcv.fit(train)
+print(gbcvModel)
 ```
 
 ### Score the testing dataset using your fitted model for evaluation purposes
 
 ```python
-dtpredictions = dtcvModel.transform(test)
+gbpredictions = gbcvModel.transform(test)
 ```
 
 ### Evaluate the model
 
 ```python
-print('RMSE:', dtevaluator.evaluate(dtpredictions))
+print('RMSE:', gbevaluator.evaluate(gbpredictions))
 ```
 
 {% hint style="info" %}
