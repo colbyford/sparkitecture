@@ -34,7 +34,7 @@ lrparamGrid = (ParamGridBuilder()
 ### Define how you want the model to be evaluated
 
 ```python
-lrevaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction", metricName = "areaUnderAUC")
+lrevaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction", metricName = "areaUnderROC")
 ```
 
 ### Define the type of cross-validation you want to perform
