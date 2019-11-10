@@ -24,10 +24,8 @@ dt = DecisionTreeClassifier(labelCol="label", featuresCol="features")
 
 ```python
 dtparamGrid = (ParamGridBuilder()
-             .addGrid(dt.maxDepth, [2, 5, 10, 20, 30])
-             #.addGrid(dt.maxDepth, [2, 5, 10])
-             .addGrid(dt.maxBins, [10, 20, 40, 80, 100])
-             #.addGrid(dt.maxBins, [10, 20])
+             .addGrid(dt.maxDepth, [2, 5, 10])
+             .addGrid(dt.maxBins, [10, 20])
              .build())
 ```
 
