@@ -10,7 +10,7 @@ dataset = sqlContext.read.format('csv') \
                     .load('/mnt/<FOLDERNAME>/<FILENAME>.csv')
 
 ## or spark.read.format('csv')...
-## Formats: "csv", "json", "parquet"
+## Formats: json, parquet, jdbc, orc, libsvm, csv, text, avro
 ```
 
 ### ...when Schema Inference Fails
@@ -37,4 +37,8 @@ df.coalesce(1) \
    .option("header", "true") \
    .save("file.csv")
 ```
+
+## Other Resources
+
+Apache Spark Data Sources Documentation: [https://spark.apache.org/docs/latest/sql-data-sources.html](https://spark.apache.org/docs/latest/sql-data-sources.html)
 
