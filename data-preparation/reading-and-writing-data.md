@@ -8,6 +8,9 @@
 dataset = sqlContext.read.format('csv') \
                     .options(header='true', inferSchema='true', delimiter= ',') \
                     .load('/mnt/<FOLDERNAME>/<FILENAME>.csv')
+
+## or spark.read.format('csv')...
+## Formats: "csv", "json", "parquet"
 ```
 
 ### ...when Schema Inference Fails

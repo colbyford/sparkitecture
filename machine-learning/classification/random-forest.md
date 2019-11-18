@@ -24,11 +24,11 @@ rf = RandomForestClassifier(labelCol="label", featuresCol="features")
 
 ```python
 rfparamGrid = (ParamGridBuilder()
-             
+
                .addGrid(rf.maxDepth, [2, 5, 10])
-             
+
                .addGrid(rf.maxBins, [5, 10, 20])
-             
+
                .addGrid(rf.numTrees, [5, 20, 50])
              .build())
 ```
