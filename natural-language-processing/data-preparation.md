@@ -1,4 +1,4 @@
-# Data Preparation
+# Text Data Preparation
 
 ## Tokenization and Vectorization
 
