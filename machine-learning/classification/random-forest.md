@@ -65,9 +65,9 @@ rfpredictions = rfcvModel.transform(test)
 ### Evaluate the model
 
 ```python
-print('Accuracy:', lrevaluator.evaluate(lrpredictions))
-print('AUC:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderROC)
-print('PR:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderPR)
+print('Accuracy:', rfevaluator.evaluate(rfpredictions))
+print('AUC:', BinaryClassificationMetrics(rfpredictions['label','prediction'].rdd).areaUnderROC)
+print('PR:', BinaryClassificationMetrics(rfpredictions['label','prediction'].rdd).areaUnderPR)
 ```
 
 {% hint style="info" %}

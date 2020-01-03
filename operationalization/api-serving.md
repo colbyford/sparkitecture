@@ -96,7 +96,7 @@ print("Response {}".format(r.text))
 ```
 
 {% hint style="warning" %}
-You may need to run `sudo netstat -tulpn` if you're running inside Databricks.
+You may need to run `sudo netstat -tulpn` to see what port is open if you're running inside Databricks.
 
 Use this command to look for the port that was opened by the server.
 {% endhint %}

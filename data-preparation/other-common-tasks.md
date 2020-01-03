@@ -112,3 +112,15 @@ sentiments_df.count()
 sentiments_df.coalesce(1).write.csv("/mnt/textanalytics/sentimentanalysis/")
 ```
 
+## Find All Columns of a Certain Type
+
+```python
+import pandas as pd
+def get_nonstring_cols(df):
+    types = spark.createDataFrame(pd.DataFrame({'Column': df.schema.names, 'Type': [str(f.dataType) for f in df.schema.fields]}))
+    result = types.filter(col('Type') != 'StringType').select('Column').rdd.flatMap(lambda x: x).collect()
+    return result
+    
+get_nonstring_cols(certifications)
+```
+
