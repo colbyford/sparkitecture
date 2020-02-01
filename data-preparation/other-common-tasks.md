@@ -124,12 +124,36 @@ def get_nonstring_cols(df):
 get_nonstring_cols(df)
 ```
 
-### Change a Column's Type
+## Change a Column's Type
 
 ```python
 from pyspark.sql.types import *
 from pyspark.sql.functions import col
 
 df = df..withColumn('col1', col('col1').cast(IntegerType()))
+```
+
+## Generate Manual Schema
+
+```python
+## Fill in list with your desired column names
+cols = ["col1", "col2", "col3"]
+i = 1
+
+for col in cols:
+    if i == 1:
+        print("schema = StructType([")
+        print("\tStructField('" + col +  "', StringType(), True),")
+    
+    elif i == len(cols):
+        print("\tStructField('" + col +  "', StringType(), True)])")
+        
+    else:
+        print("\tStructField('" + col +  "', StringType(), True),")
+    
+    i += 1
+    
+## Once the output has printed, copy and paste into a new cell
+## and change column types and nullability
 ```
 
