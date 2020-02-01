@@ -30,7 +30,7 @@ This is an open source project \(GPL v3.0\) for the Spark community. If you have
       <td style="text-align:left">
         <p><code>@misc{sparkitecture,</code>
         </p>
-        <p><code>author = {Colby Ford},</code>
+        <p><code>author = {Colby T. Ford},</code>
         </p>
         <p><code>title  = {Sparkitecture - {A} collection of &quot;cookbook-style&quot; scripts for simplifying data engineering and machine learning in {Apache Spark}.},</code>
         </p>
@@ -45,7 +45,7 @@ This is an open source project \(GPL v3.0\) for the Spark community. If you have
         <p><code>}</code>
         </p>
       </td>
-      <td style="text-align:left">Colby Ford. (2019, October) Sparkitecture - A collection of &quot;cookbook-style&quot;
+      <td style="text-align:left">Colby T. Ford. (2019, October) Sparkitecture - A collection of &quot;cookbook-style&quot;
         scripts for simplifying data engineering and machine learning in Apache
         Spark., (Version v1.0.0). Zenodo. <a href="http://doi.org/10.5281/zenodo.3468502">http://doi.org/10.5281/zenodo.3468502</a>
       </td>

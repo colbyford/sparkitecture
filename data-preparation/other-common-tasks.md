@@ -121,6 +121,15 @@ def get_nonstring_cols(df):
     result = types.filter(col('Type') != 'StringType').select('Column').rdd.flatMap(lambda x: x).collect()
     return result
     
-get_nonstring_cols(certifications)
+get_nonstring_cols(df)
+```
+
+### Change a Column's Type
+
+```python
+from pyspark.sql.types import *
+from pyspark.sql.functions import col
+
+df = df..withColumn('col1', col('col1').cast(IntegerType()))
 ```
 

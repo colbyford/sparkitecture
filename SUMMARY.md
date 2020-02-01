@@ -10,9 +10,9 @@
 
 ## Data Preparation
 
+* [Reading and Writing Data](data-preparation/reading-and-writing-data.md)
 * [Shaping Data with Pipelines](data-preparation/shaping-data-with-pipelines.md)
 * [Other Common Tasks](data-preparation/other-common-tasks.md)
-* [Reading and Writing Data](data-preparation/reading-and-writing-data.md)
 
 ## Machine Learning
 
