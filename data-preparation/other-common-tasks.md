@@ -133,7 +133,7 @@ from pyspark.sql.functions import col
 df = df..withColumn('col1', col('col1').cast(IntegerType()))
 ```
 
-## Generate Manual Schema
+## Generate StructType Schema Printout
 
 ```python
 ## Fill in list with your desired column names
@@ -155,5 +155,46 @@ for col in cols:
     
 ## Once the output has printed, copy and paste into a new cell
 ## and change column types and nullability
+```
+
+## Generate StructType Schema from List
+
+```python
+"""
+Struct Schema Creator for PySpark
+
+[<Column Name>, <Column Type>, <Column Nullable>]
+
+Types:  binary, boolean, byte, date,
+        double, integer, long, null,
+        short, string, timestamp, unknown
+"""
+from pyspark.sql.types import *
+
+## Fill in with your desired column names, types, and nullability
+cols = [["col1", "string", False],
+        ["col2", "date", True],
+        ["col3", "integer", True]]
+i = 1
+
+
+schema_set = ["schema = StructType(["]
+
+for col in cols:
+    colname = col[0]
+    coltype = col[1].title() + "Type()"
+    colnull = col[2]
+    
+    if i == len(cols):
+        iter_structfield = "StructField('" + colname +  "', " + coltype + ", " + str(colnull) + ")])"
+    else:
+        iter_structfield = "StructField('" + colname +  "', " + coltype + ", " + str(colnull) + "),"
+    
+    schema_set.append(iter_structfield)
+    i += 1
+schema_string = ''.join([str(elem) for elem in schema_set]) 
+
+## This will execute the generated command
+exec(schema_string)
 ```
 
