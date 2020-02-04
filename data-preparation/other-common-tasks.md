@@ -130,7 +130,7 @@ get_nonstring_cols(df)
 from pyspark.sql.types import *
 from pyspark.sql.functions import col
 
-df = df..withColumn('col1', col('col1').cast(IntegerType()))
+df = df.withColumn('col1', col('col1').cast(IntegerType()))
 ```
 
 ## Generate StructType Schema Printout \(Manual Execution\)
