@@ -198,3 +198,11 @@ schema_string = ''.join(map(str, schema_set))
 exec(schema_string)
 ```
 
+## Make a DataFrame of Consecutive Dates
+
+```python
+from pyspark.sql.functions import sequence, to_date, explode, col
+date_dim = spark.sql("SELECT sequence(to_date('2018-01-01'), to_date('2019-12-31'), interval 1 day) as DATE").withColumn("DATE", explode(col("DATE")))
+display(date_dim)
+```
+
