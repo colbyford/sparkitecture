@@ -18,7 +18,7 @@ column_mapping = [[o, n] for o, n in zip(column_list, new_column_list)]
 
 # print(column_mapping)
 
-# data = data.select(list(map(lambda old, new: col(old).alias(new),*zip(*column_mapping))))
+data = data.select(list(map(lambda old, new: col(old).alias(new),*zip(*column_mapping))))
 ```
 
 ## Convert PySpark DataFrame to NumPy array
