@@ -60,11 +60,13 @@ df = spark.read.format("vcf")\
           .withColumn("first_genotype", expr("genotypes[0]"))
 ```
 
-## Summary Statistics
+## Summary Statistics and Quality Control
 
 ```python
 df = df.withColumn("hardyweinberg", expr("hardy_weinberg(genotypes)")) \
-       .withColumn("stats", expr("call_summary_stats(genotypes)"))
+       .withColumn("summarystats", expr("call_summary_stats(genotypes)")) \
+       .withColumn("depthstats", expr("dp_summary_stats(genotypes)")) \
+       .withColumn("genotypequalitystats", expr("gq_summary_stats(genotypes)"))
 ```
 
 ## Write out Data
