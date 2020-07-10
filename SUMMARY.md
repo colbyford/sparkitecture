@@ -5,7 +5,7 @@
 ## Cloud Service Integration
 
 * [Azure Storage](cloud-service-integration/azure-storage.md)
-* [Azure SQL Data Warehouse](cloud-service-integration/azure-sql-data-warehouse.md)
+* [Azure SQL Data Warehouse / Synapse](cloud-service-integration/azure-sql-data-warehouse.md)
 * [Azure Data Factory](cloud-service-integration/azure-data-factory.md)
 
 ## Data Preparation

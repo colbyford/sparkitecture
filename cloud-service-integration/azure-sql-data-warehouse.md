@@ -1,4 +1,4 @@
-# Azure SQL Data Warehouse
+# Azure SQL Data Warehouse / Synapse
 
 ### Set up Azure SQL DW connection parameters
 
