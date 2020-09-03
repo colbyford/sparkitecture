@@ -58,6 +58,11 @@ df = spark.read.format("vcf")\
           .option("flattenInfoFields", False)\
           .load(vcf_path)\
           .withColumn("first_genotype", expr("genotypes[0]"))
+          
+# bgen_path = "/databricks-datasets/genomics/1kg-bgens/1kg_chr22.bgen"
+
+# df = spark.read.format("bgen") \
+#           .load(bgen_path)
 ```
 
 ## Summary Statistics and Quality Control
@@ -66,7 +71,18 @@ df = spark.read.format("vcf")\
 df = df.withColumn("hardyweinberg", expr("hardy_weinberg(genotypes)")) \
        .withColumn("summarystats", expr("call_summary_stats(genotypes)")) \
        .withColumn("depthstats", expr("dp_summary_stats(genotypes)")) \
-       .withColumn("genotypequalitystats", expr("gq_summary_stats(genotypes)"))
+       .withColumn("genotypequalitystats", expr("gq_summary_stats(genotypes)")) \
+       .filter(col("qual") >= 98) \
+       .filter((col("start") >= 16000000) & (col("end") >= 16050000)) \
+       .where((col("alleleFrequencies").getItem(0) >= allele_freq_cutoff) & 
+              (col("alleleFrequencies").getItem(0) <= (1.0 - allele_freq_cutoff))) \
+       .withColumn("log10pValueHwe", when(col("pValueHwe") == 0, 26).otherwise(-log10(col("pValueHwe"))))
+```
+
+### Split Multiallelic Variants to Biallelic
+
+```python
+split_df = glow.transform("split_multiallelics", df)
 ```
 
 ## Write out Data
