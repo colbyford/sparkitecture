@@ -46,7 +46,15 @@ display(dbutils.fs.ls("/mnt/<FOLDERNAME>"))
 
 ## Mounting Data Lake Storage
 
+For finer-grained access controls on your data, you may opt to use Azure Data Lake Storage. In Databricks, you can connect to your data lake in a similar manner to blob storage. Instead of an access key, your user credentials will be passed through, therefore only showing you data that you specifically have access to.
+
 ### Pass-through Azure Active Directory Credentials
+
+To pass in your Azure Active Directory credentials from Databricks to Azure Data Lake Store, you will need to enable this feature in Databricks under **New Cluster** &gt; **Advanced Options**.
+
+Note: If you create a _High Concurrency_ cluster, multiple users can use the same cluster. The _Standard_ cluster mode will only allow a single user's credential at a time.
+
+![](../.gitbook/assets/dbx_cred_passthrough.png)
 
 ```python
 configs = {
