@@ -44,3 +44,21 @@ display(dbutils.fs.ls("/mnt/<FOLDERNAME>"))
 
 * To learn how to create an Azure Storage service, visit [https://docs.microsoft.com/en-us/azure/storage/](https://docs.microsoft.com/en-us/azure/storage/)
 
+## Mounting Data Lake Storage
+
+### Pass-through Azure Active Directory Credentials
+
+```python
+configs = {
+  "fs.azure.account.auth.type": "CustomAccessToken",
+  "fs.azure.account.custom.token.provider.class": spark.conf.get("spark.databricks.passthrough.adls.gen2.tokenProviderClassName")
+}
+```
+
+```python
+dbutils.fs.mount(
+  source = "abfss://<CONTAINERNAME>@<STORAGEACCOUNT>.dfs.core.windows.net/",
+  mount_point = "/mnt/<FOLDERNAME>",
+  extra_configs = configs)
+```
+
