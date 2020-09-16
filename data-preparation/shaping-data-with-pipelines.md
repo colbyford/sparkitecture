@@ -61,7 +61,8 @@ This step transforms all the numerical data along with the encoded categorical d
 
 ```python
 assemblerInputs = categoricalColumnsclassVec + numericalColumns
-assembler = VectorAssembler(inputCols = assemblerInputs, outputCol="features")
+assembler = VectorAssembler(inputCols = assemblerInputs,
+                            outputCol = "features")
 stages += [assembler]
 ```
 
