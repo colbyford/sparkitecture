@@ -65,6 +65,18 @@ assembler = VectorAssembler(inputCols = assemblerInputs, outputCol="features")
 stages += [assembler]
 ```
 
+### Scale features using Normalization
+
+```python
+from pyspark.ml.feature import StandardScaler
+
+scaler = StandardScaler(inputCol = "features",
+                        outputCol = "scaledFeatures",
+                        withStd = True,
+                        withMean = True)
+stages += [scaler]
+```
+
 ### Set up the transformation pipeline using the stages you've created along the way
 
 ```python
