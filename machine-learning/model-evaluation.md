@@ -1,5 +1,27 @@
 # Model Evaluation
 
+### Evaluate model performance by probability cutoff
+
+Note: Extract probability values using method found here - [https://www.sparkitecture.io/machine-learning/model-saving-and-loading\#remove-unnecessary-columns-from-the-scored-data](https://www.sparkitecture.io/machine-learning/model-saving-and-loading#remove-unnecessary-columns-from-the-scored-data).
+
+```python
+performance_df = spark.createDataFrame([(0,0,0)], ['cutoff', 'AUPR', 'AUC'])
+
+for cutoff in range(5, 95, 5):
+  cutoff = (cutoff * 0.01)
+  
+  print('Testing cutoff = ', str(format(cutoff, '.2f')))
+
+  lrpredictions_prob_temp = lrpredictions.withColumn('prediction_test', when(col('probability') >= cutoff, 1).otherwise(0).cast(DoubleType()))
+  aupr_temp = BinaryClassificationMetrics(lrpredictions_prob_temp['label', 'prediction_test'].rdd).areaUnderPR
+  auc_temp = BinaryClassificationMetrics(lrpredictions_prob_temp['label', 'prediction_test'].rdd).areaUnderROC
+  print('\tAUPR:', aupr_temp,'\tAUC:', auc_temp)
+  performance_df_row = spark.createDataFrame([(cutoff,aupr_temp,auc_temp)], ['cutoff', 'AUPR', 'AUC'])
+  performance_df = performance_df.union(performance_df_row)
+
+display(performance_df)
+```
+
 ### Evaluate multiclass classification models
 
 ```python
