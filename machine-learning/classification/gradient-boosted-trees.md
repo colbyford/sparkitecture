@@ -62,9 +62,9 @@ gbpredictions = gbcvModel.transform(test)
 ### Evaluate the model
 
 ```python
-print('Accuracy:', lrevaluator.evaluate(lrpredictions))
-print('AUC:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderROC)
-print('PR:', BinaryClassificationMetrics(lrpredictions['label','prediction'].rdd).areaUnderPR)
+print('Accuracy:', gbevaluator.evaluate(gbpredictions))
+print('AUC:', BinaryClassificationMetrics(gbpredictions['label','prediction'].rdd).areaUnderROC)
+print('PR:', BinaryClassificationMetrics(gbpredictions['label','prediction'].rdd).areaUnderPR)
 ```
 
 {% hint style="info" %}
