@@ -7,6 +7,12 @@ description: >-
 
 # MLflow
 
+#### Install mlflow using pip
+
+```python
+pip install mlflow
+```
+
 {% hint style="warning" %}
 MLflow can be used in any Spark environmnet, but the automated tracking and UI of MLflow is Databricks-Specific Functionality.
 {% endhint %}
