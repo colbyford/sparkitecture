@@ -208,6 +208,8 @@ display(date_dim)
 
 ## Unpivot a DataFrame Dynamically (Longer)
 
+Pivot a wide dataset into a longer form. (Similar to the [`pivot_longer()`](https://tidyr.tidyverse.org/reference/pivot\_longer.html) function from the tidyr R package or the [`.wide_to_long`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.wide\_to\_long.html) method from pandas.)
+
 ```python
 ## UnpivotDF Function
 def UnpivotDF(df, columns, pivotCol, unpivotColName, valueColName):
