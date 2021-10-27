@@ -2,7 +2,7 @@
 
 ### Split Data into Training and Test Datasets
 
-```text
+```
 train, test = dataset.randomSplit([0.75, 0.25], seed = 1337)
 ```
 
@@ -23,7 +23,7 @@ data = data.select(list(map(lambda old, new: col(old).alias(new),*zip(*column_ma
 
 ## Convert PySpark DataFrame to NumPy array
 
-```text
+```
 ## Convert `train` DataFrame to NumPy
 pdtrain = train.toPandas()
 trainseries = pdtrain['features'].apply(lambda x : np.array(x.toArray())).as_matrix().reshape(-1,1)
@@ -43,7 +43,7 @@ print(y_test)
 
 ### Create \`chunker\` function
 
-The cognitive service APIs can only take a limited number of observations at a time \(1,000, to be exact\) or a limited amount of data in a single call. So, we can create a `chunker` function that we will use to split the dataset up into smaller chunks.
+The cognitive service APIs can only take a limited number of observations at a time (1,000, to be exact) or a limited amount of data in a single call. So, we can create a `chunker` function that we will use to split the dataset up into smaller chunks.
 
 ```python
 ## Define Chunking Logic
@@ -133,7 +133,7 @@ from pyspark.sql.functions import col
 df = df.withColumn('col1', col('col1').cast(IntegerType()))
 ```
 
-## Generate StructType Schema Printout \(Manual Execution\)
+## Generate StructType Schema Printout (Manual Execution)
 
 ```python
 ## Fill in list with your desired column names
@@ -157,7 +157,7 @@ for col in cols:
 ## and change column types and nullability
 ```
 
-## Generate StructType Schema from List \(Automatic Execution\)
+## Generate StructType Schema from List (Automatic Execution)
 
 ```python
 """
@@ -206,3 +206,24 @@ date_dim = spark.sql("SELECT sequence(to_date('2018-01-01'), to_date('2019-12-31
 display(date_dim)
 ```
 
+## Unpivot a DataFrame Dynamically (Longer)
+
+```python
+## UnpivotDF Function
+def UnpivotDF(df, columns, pivotCol, unpivotColName, valueColName):
+  columnsValue = list(map(lambda x: str("'") + str(x) + str("',")  + str(x), columns))
+  stackCols = ','.join(x for x in columnsValue)
+
+  df_unpvt = df.selectExpr(pivotCol, f"stack({str(len(columns))}, {stackCols}) as ({unpivotColName}, {valueColName})")\
+               .select(pivotCol, unpivotColName, valueColName)
+  
+  return(df_unpvt)
+```
+
+```python
+df_unpvt = UnpivotDF(df = df,
+                     columns = df.columns[1:], ## The columns to transpose into a single, longer column
+                     pivotCol = "ID", ## The column to leave in place (usually an ID)
+                     unpivotColName = "Category", ## The name of the new column
+                     valueColName = "value") ## The name of the column of values
+```
